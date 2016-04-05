@@ -13,6 +13,7 @@ gem 'sdoc', '~> 0.4.0', group: :doc
 gem 'bootstrap-sass', '~> 3.3.6'
 gem 'simple_form'
 gem 'pry-rails', :group => :development
+gem "font-awesome-rails"
 
 
 

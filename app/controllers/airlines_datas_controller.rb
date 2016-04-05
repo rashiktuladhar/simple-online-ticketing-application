@@ -3,6 +3,12 @@ class AirlinesDatasController < ApplicationController
     @airlines = AirlinesDatum.all
   end
 
+  def new
+  end
+
+  def create
+  end
+
   def show
   end
 

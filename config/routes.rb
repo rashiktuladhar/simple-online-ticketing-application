@@ -1,6 +1,7 @@
 Rails.application.routes.draw do
   
   resources :airlines_datas
+  root 'airlines_datas#index'
 
 
   # The priority is based upon order of creation: first created -> highest priority.

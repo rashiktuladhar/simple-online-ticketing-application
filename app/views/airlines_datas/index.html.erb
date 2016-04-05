@@ -1,2 +1,29 @@
-<h1>AirlinesDatas#index</h1>
-<p>Find me in app/views/airlines_datas/index.html.erb</p>
+
+
+<div>
+	<div class="container">
+		<h3><%= link_to '<i class="fa fa-plus text-success"></i>'.html_safe, new_airlines_data_path, :title => "Add New Airline"%></h3>
+		<table class="table table-bordered">
+			<tr>
+				<td>Airlines Name</td>
+				<td>Airlines Address</td>
+				<td>Airlines Contact</td>
+				<td>Airlines Plane Capacity</td>
+				<td>Actions</td>
+			</tr>
+			<% @airlines.each do |airline| %>
+				<tr>
+					<td><%= airline.airlines_name %></td>
+					<td><%= airline.airlines_address %></td>
+					<td><%= airline.airlines_contact %></td>
+					<td><%= airline.airlines_plane_capacity %></td>
+					<td>
+						<%= link_to "<i class='fa fa-pencil'></i>", edit_airlines_data_path %>
+						<%= link_to "<i class='fa fa-trash'></i>", edit_airlines_data_path %>
+					</td>
+				</tr>
+			<% end %>
+		</table>
+	</div>
+</div>
+
