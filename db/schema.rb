@@ -11,15 +11,6 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160405181933) do
-
-  create_table "airlines_data", force: :cascade do |t|
-    t.string   "airlines_name"
-    t.string   "airlines_address"
-    t.string   "airlines_contact"
-    t.integer  "airlines_plane_capacity"
-    t.datetime "created_at",              null: false
-    t.datetime "updated_at",              null: false
-  end
+ActiveRecord::Schema.define(version: 0) do
 
 end
