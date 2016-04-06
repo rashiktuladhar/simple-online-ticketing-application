@@ -16,6 +16,13 @@ gem "font-awesome-rails"
 gem 'simple_form'
 
 
+# localhost:3000/rails/db visual db 
+gem 'rails_db'
+
+# pagination gem
+gem 'will_paginate', '~> 3.0.5'
+
+
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
@@ -28,5 +35,11 @@ group :development do
 
   # Spring speeds up development by keeping your application running in the background. Read more: https://github.com/rails/spring
   gem 'spring'
+
+
+
+  # more descriptive error message
+  gem "better_errors"
 end
+
 

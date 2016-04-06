@@ -1,6 +1,13 @@
 class AirlinesDataController < ApplicationController
+
+  # do this before calling any action below (need to call the action find airlines within private area for only the 4 operation mentioned before calling index and other action)
+  before_action :find_airlines, only: [:show, :edit, :update, :destroy]
+
   def index
-    @airlines = AirlinesDatum.all
+    # @airlines = AirlinesDatum.all
+
+    @airlines = AirlinesDatum.paginate(:page => params[:page], :per_page => 1)
+
   end
 
   def new
@@ -27,16 +34,32 @@ class AirlinesDataController < ApplicationController
   end
 
   def update
-  end
+    if @airline.update(airline_params)
+      flash[:success] = "Airlines updated successfully."
+      redirect_to root_path
+    else
+      render 'edit'
+    end
+  end  
 
   def destroy
+    @airline.destroy
+    flash[:success] = "Airlines Deleted successfully."
+    redirect_to root_path
   end
+
 
 
   private
 
   def airline_params
-    params.require(:AirlinesDatum).permit(:airlines_name ,:airlines_address ,:airlines_contact ,:airlines_plane_capacity)
+    params.require(:airlines_datum).permit(:airlines_name ,:airlines_address ,:airlines_contact ,:airlines_plane_capacity)
   end
+
+  # params for getting the id of the airlines for DRY (delete, update and show)
+  def find_airlines
+    @airline = AirlinesDatum.find(params[:id])
+  end
+
 
 end

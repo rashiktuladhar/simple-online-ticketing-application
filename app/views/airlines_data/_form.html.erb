@@ -1,16 +1,7 @@
-<%= form_tag("/airlines_datas", method: "post") do %>
-  <%= label_tag(:airlines_name, "Airlines Name:") %>
-  <%= text_field_tag(:airlines_name) %>
-
-	<%= label_tag(:airlines_address, "Airlines Address:") %>
-  <%= text_field_tag(:airlines_address) %>
-
-  <%= label_tag(:airlines_contact, "Airlines Contact:") %>
-  <%= text_field_tag(:airlines_contact) %>
-
-  <%= label_tag(:airlines_plane_capacity, "Airlines Plane Capacity:") %>
-  <%= text_field_tag(:airlines_plane_capacity) %>
-
-
-  <%= submit_tag("Add") %>
-  <% end %>
+<%= simple_form_for @airline do |f| %>
+	<%= f.input :airlines_name, label: "Airlines Name" %>
+	<%= f.input :airlines_address, label: "Airlines Address" %>
+	<%= f.input :airlines_contact, label: "Airlines Contact" %>
+	<%= f.input :airlines_plane_capacity, label: "Airlines Plane Capacity" %>
+	<%= f.button :submit , label: "Add / Update Airlines", :class => "btn btn-success"%>
+<% end %>
