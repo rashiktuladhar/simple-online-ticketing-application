@@ -1,0 +1,34 @@
+
+
+<div>
+	<div class="container">
+	
+		<% flash.each do |key, value| %>
+        <div class="alert alert-<%= key %>"><%= value %></div>
+      <% end %>
+
+
+		<h3><%= link_to '<i class="fa fa-plus text-success"></i>'.html_safe, new_airlines_datum_path, :title => "Add New Airline"%></h3>
+		<table class="table table-bordered">
+			<tr>
+				<td>Airlines Name</td>
+				<td>Airlines Address</td>
+				<td>Airlines Contact</td>
+				<td>Airlines Plane Capacity</td>
+				<td>Actions</td>
+			</tr>
+			<% @airlines.each do |airline| %>
+				<tr>
+					<td><%= airline.airlines_name %></td>
+					<td><%= airline.airlines_address %></td>
+					<td><%= airline.airlines_contact %></td>
+					<td><%= airline.airlines_plane_capacity %></td>
+					<td>
+						<%= link_to '<i class="fa fa-pencil"></i>'.html_safe, edit_airlines_datum_path(@airlines) %>						
+					</td>
+				</tr>
+			<% end %>
+		</table>
+	</div>
+</div>
+
