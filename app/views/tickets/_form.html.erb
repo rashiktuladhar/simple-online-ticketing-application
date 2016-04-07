@@ -1,0 +1,11 @@
+<%= simple_form_for @ticket do |f| %>
+	<%= f.association :airlines_datum, label_method: :airlines_name, value_method: :id, include_blank: false %>
+	<%= f.input :route_type, collection: {"One Way" => "O", "Two Way" => "T"}, prompt: "Select route type"%>
+	<%= f.input :from_country, label: "From Country" %>
+	<%= f.input :to_country, label: "To Country" %>
+	<%= f.input :departure_date, label: "Departure Date" %>
+	<%= f.input :arrival_date, label: "Arrival Date" %>
+	<%= f.input :no_tickets, label: "Total Tickets" %>
+	<%= f.input :ticket_price, label: "Ticket Price" %>
+	<%= f.button :submit , label: "Add / Update Ticket", :class => "btn btn-success"%>
+<% end %>

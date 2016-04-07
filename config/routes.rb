@@ -1,8 +1,9 @@
 Rails.application.routes.draw do
-  
+
   devise_for :users
   resources :airlines_data
-  root 'airlines_data#index'
+  resources :tickets
+  root 'tickets#index'
 
 
   # The priority is based upon order of creation: first created -> highest priority.

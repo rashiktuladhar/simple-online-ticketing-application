@@ -1,0 +1,21 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  airlines_datum_id: 1
+  route_type: MyString
+  from_country: MyString
+  to_country: MyString
+  departure_date: 2016-04-07
+  arrival_date: 2016-04-07
+  no_tickets: 1
+  ticket_price: 1
+
+two:
+  airlines_datum_id: 1
+  route_type: MyString
+  from_country: MyString
+  to_country: MyString
+  departure_date: 2016-04-07
+  arrival_date: 2016-04-07
+  no_tickets: 1
+  ticket_price: 1

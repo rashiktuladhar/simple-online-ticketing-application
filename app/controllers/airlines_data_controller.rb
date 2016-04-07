@@ -6,7 +6,7 @@ class AirlinesDataController < ApplicationController
   def index
     # @airlines = AirlinesDatum.all
 
-    @airlines = AirlinesDatum.paginate(:page => params[:page], :per_page => 1)
+    @airlines = AirlinesDatum.paginate(:page => params[:page], :per_page => 10)
 
   end
 
@@ -20,7 +20,7 @@ class AirlinesDataController < ApplicationController
 
     if @airline.save
       flash[:success] = "Airlines added successfully."
-      redirect_to root_path
+      redirect_to airlines_data_path
     else
       render 'new'
     end
@@ -36,7 +36,7 @@ class AirlinesDataController < ApplicationController
   def update
     if @airline.update(airline_params)
       flash[:success] = "Airlines updated successfully."
-      redirect_to root_path
+      redirect_to airlines_data_path
     else
       render 'edit'
     end
@@ -45,7 +45,7 @@ class AirlinesDataController < ApplicationController
   def destroy
     @airline.destroy
     flash[:success] = "Airlines Deleted successfully."
-    redirect_to root_path
+    redirect_to airlines_data_path
   end
 
 

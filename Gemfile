@@ -14,6 +14,8 @@ gem 'bootstrap-sass', '~> 3.3.6'
 gem 'pry-rails', :group => :development
 gem "font-awesome-rails"
 gem 'simple_form'
+gem 'country_select'
+
 
 
 # localhost:3000/rails/db visual db 

@@ -1,0 +1,49 @@
+<!--Tab Menu-->
+<div class="container">
+	<h1>Tickets Data Setup</h1>
+	<% flash.each do |key, value| %>
+	<div class="alert alert-<%= key %>"><%= value %></div>
+	<% end %>
+</div>
+<div id="exTab1" class="container">
+	<ul  class="nav nav-pills">
+		<li>
+			<%= link_to "Airlines Lists",airlines_data_path %>		
+		</li>
+		<li class="active">
+			<%= link_to "Ticket Lists",tickets_path %>
+		</li>
+</ul>
+<div class="tab-content clearfix">
+	<div class="tab-pane active" id="1a">
+		<h3><%= link_to '<i class="fa fa-plus text-success"></i>'.html_safe, new_ticket_path, :title => "Add New Airline"%></h3>
+		<table class="table table-bordered">
+			<tr>
+				<th>Airlines Name</th>
+				<th>From</th>
+				<th>To</th>
+				<th>Route</th>
+				<th>Departure Date</th>
+				<th>Arrival Date</th>
+				<th>Available Tickets</th>
+				<th>Action</th>
+			</tr>
+			<% @tickets.each do |ticket| %>
+			<tr>
+				<td><%= ticket.airlines_datum_id %></td>
+				<td><%= ticket.from_country %></td>
+				<td><%= ticket.to_country %></td>
+				<td><%= ticket.route_type %></td>
+				<td><%= ticket.departure_date %></td>
+				<td><%= ticket.arrival_date %></td>
+				<td><%= ticket.no_tickets %></td>
+				<td>
+					<%= link_to '<i class="fa fa-pencil"></i>'.html_safe, edit_ticket_path(ticket.id) %>
+					<%= link_to '<i class="fa fa-trash text-danger"></i>'.html_safe, ticket_path(ticket.id), method: :delete, data: {confirm: "Are you sure to delete the Ticket Details?" } %>
+				</td>
+			</tr>
+			<% end %>
+		</table>
+	</div>
+</div>
+</div>
