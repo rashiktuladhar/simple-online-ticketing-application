@@ -1,5 +1,6 @@
 Rails.application.routes.draw do
   
+  devise_for :users
   resources :airlines_data
   root 'airlines_data#index'
 
