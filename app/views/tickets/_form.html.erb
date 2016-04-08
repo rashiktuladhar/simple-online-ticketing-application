@@ -1,5 +1,5 @@
 <%= simple_form_for @ticket do |f| %>
-	<%= f.association :airlines_datum, label_method: :airlines_name, value_method: :id, include_blank: false %>
+	<%= f.association :airlines_datum,label:"Airlines", label_method: :airlines_name, value_method: :id, include_blank: false %>
 	<%= f.input :route_type, collection: {"One Way" => "O", "Two Way" => "T"}, prompt: "Select route type"%>
 	<%= f.input :from_country, label: "From Country" %>
 	<%= f.input :to_country, label: "To Country" %>
