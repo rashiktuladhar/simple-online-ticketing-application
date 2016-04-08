@@ -1,20 +1,37 @@
+<h1 class="page-header">
+Airlines <small>Data Setup</small>
+</h1>
+<ol class="breadcrumb">
+	<li class="active">
+		<i class="fa fa-paper-plane"></i> Airlines Setup
+	</li>
+</ol>
+
+
+
 <!--Tab Menu-->
 <div class="container">
-	<h1>Airlines Data Setup</h1>
 	<% flash.each do |key, value| %>
 	<div class="alert alert-<%= key %>"><%= value %></div>
 	<% end %>
 </div>
-<div id="exTab1" class="container">
-	<ul  class="nav nav-pills">
-		<li class="active">
-			<%= link_to "Airlines Lists",airlines_data_path %>	
-		</li>
-		<li><%= link_to "Ticket Lists",tickets_path %></li>
-</ul>
+
+
+<div id="exTab1" class="">
+
+
+<!-- <ul  class="nav nav-pills">
+	<li class="active">
+		<%= link_to "Airlines Lists",airlines_data_path %>	
+	</li>
+	<li><%= link_to "Ticket Lists",tickets_path %></li>
+</ul> -->
+
+
+
 <div class="tab-content clearfix">
 	<div class="tab-pane active" id="1a">
-		<h3><%= link_to '<i class="fa fa-plus text-success"></i>'.html_safe, new_airlines_datum_path, :title => "Add New Airline"%></h3>
+		<h3><%= link_to '<i class="fa fa-plus text-success"></i> Add Airlines'.html_safe, new_airlines_datum_path, :title => "Add New Airline"%></h3>
 		<table class="table table-bordered">
 			<tr>
 				<th>Airlines Name</th>

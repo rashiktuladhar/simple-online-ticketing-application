@@ -1,3 +1,13 @@
+<h1 class="page-header">
+Ticket <small>Data Setup</small>
+</h1>
+<ol class="breadcrumb">
+	<li class="active">
+		<i class="fa fa-ticket"></i> Ticket Setup
+	</li>
+</ol>
+
+
 <%= simple_form_for @ticket do |f| %>
 	<%= f.association :airlines_datum,label:"Airlines", label_method: :airlines_name, value_method: :id, include_blank: false %>
 	<%= f.input :route_type, collection: {"One Way" => "O", "Two Way" => "T"}, prompt: "Select route type"%>
