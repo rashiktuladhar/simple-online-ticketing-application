@@ -232,6 +232,7 @@ DEPENDENCIES
   pry-rails
   rails (= 4.2.6)
   rails_db
+  ransack
   sass-rails (~> 5.0)
   sdoc (~> 0.4.0)
   simple_form

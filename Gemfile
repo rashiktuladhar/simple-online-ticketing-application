@@ -16,6 +16,8 @@ gem "font-awesome-rails"
 gem 'simple_form'
 gem 'country_select'
 
+gem 'ransack'
+
 
 
 # localhost:3000/rails/db visual db 
