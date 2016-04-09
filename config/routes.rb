@@ -4,6 +4,7 @@ Rails.application.routes.draw do
   resources :airlines_data
   resources :tickets
   resources :ticket_search
+  resources :customers
   root 'ticket_search#index'
 
 

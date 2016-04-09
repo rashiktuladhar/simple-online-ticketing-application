@@ -1,0 +1,63 @@
+<div class="container">
+	<%= link_to "Back To Home".html_safe, ticket_search_index_path, :class => "btnHome" %>
+	<section class="print-ticket" id="print-ticket">
+		<header>
+		<article class="ticket-source-destination float-left"><%= @ticket_details.from_country %> - <%= @ticket_details.to_country %></article>
+	<article class="ticket-date float-right"><i class="fa fa-calendar"></i> Issued Date: <%= Date.today.to_formatted_s(:long) %></article>
+	<div class="clearfix"></div>
+</header>
+<article class="passenger-details">
+	<label>Prepared For</label>
+	<p><%= @customer_ticket.customer_name %></p>
+</article>
+<article class="passenger-flight-details">
+	<p>RESERVATION CODE: <span>mQ105</span></p>
+	<p>AIRLINE RESERVATION CODE: <span>45678</span></p>
+</article>
+<article class="passenger-flight-date">
+	<p><i class="fa fa-plane"></i> DEPARTURE: <strong><%= @ticket_details.departure_date %></strong>
+		<% if(@ticket_details.route_type=="T") %>
+			 , ARRIVAL: <strong><%= @ticket_details.arrival_date %></strong>
+		<% end %>
+
+	<br><small>please verify flight times prior to departure.</small></p>
+</article>
+<article class="plane-details">
+	<table>
+		<tr>
+			<td rowspan="2">
+				<h3><%= @ticket_details.airline_name %><br>9W0326</h3><br>
+				<p>Duration: 1hr(s) 45min(s)</p>
+			</td>
+			<td>
+				<h2><%= @ticket_details.from_country %><br><small><%= @ticket_details.from_country %></small></h2>
+			</td>
+			<td>
+				<h2><%= @ticket_details.to_country %><br><small><%= @ticket_details.to_country %></small></h2>
+			</td>
+		</tr>
+	</table>
+	<br>
+	<table class="table table-responsive">
+		<tr class="grey-background white-color">
+			<th>Passenger Name</th>
+			<th>No. of Seats</th>
+			<th>Class</th>
+			<th>Status</th>
+			<th>Meals</th>
+		</tr>
+		<tr>
+			<td>Rashik Tuladhar</td>
+			<td><%= @customer_ticket.no_tickets %></td>
+			<td>ECONOMY</td>
+			<td>CONFIRMED</td>
+			<td>BREAKFAST</td>
+		</tr>
+	</table>
+</article>
+<footer>
+	<label for="help-text" class="help-text">Instruction: Press The Plane Button To Book Your Flight</label>
+	<button name="ticket-book" id="ticket-book"><i class="fa fa-print"></i></button>
+</footer>
+</section>
+</div>

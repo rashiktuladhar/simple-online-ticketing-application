@@ -178,6 +178,143 @@
 
 
 
+.print-ticket
+{
+	margin-top: 40px;
+	margin-bottom: 20px;
+	-webkit-box-shadow: 1px 0px 5px 1px rgba(209,198,209,1);
+	-moz-box-shadow: 1px 0px 5px 1px rgba(209,198,209,1);
+	box-shadow: 1px 0px 5px 1px rgba(209,198,209,1);
+}
+
+.print-ticket header
+{
+	color:grey;
+	padding: 20px;
+	border-bottom: 1px solid rgba(0,0,0,0.2);
+}
+
+.print-ticket header img
+{
+	margin-left: 20px;
+	width:20%;
+}
+
+.print-ticket label
+{
+	display: block;
+	padding-top: 15px;
+	padding-bottom: 5px;
+	font-size: 14px;
+	color:grey;
+	font-weight: 600;
+}
+
+.print-ticket footer
+{
+	height:80px;
+	width:95%;
+	position:relative;
+	margin-top: 20px;
+	margin-left: 20px;
+}
+
+.print-ticket footer .help-text
+{
+	position:absolute;
+}
+
+.print-ticket footer button
+{
+	height:50px;
+	width:50px;
+	border-radius: 40px;
+	font-size: 20px;
+	right: 0px;
+	font-family: FontAwesome;
+	position: absolute;
+	border:none;
+	color:#FFF;
+	background-color: #4CAF50;
+	-webkit-transition:all 1s;
+	-moz-transition:all 1s;
+	-ms-transition:all 1s;
+	cursor: pointer;
+}
+
+a.btnHome
+{
+	text-decoration: none;
+}
+
+.passenger-details
+{
+	padding:20px;
+}
+
+.passenger-details label
+{
+}
+
+.passenger-details p
+{
+	font-size: 22px;
+}
+
+.passenger-details p > span
+{
+	font-weight: bold;
+}
+
+.passenger-flight-details
+{
+	padding:20px;
+	color:grey;
+	border-bottom: 1px solid rgba(0,0,0,0.3);
+}
+
+.passenger-flight-date
+{
+	padding:20px;
+	color:grey;
+}
+
+.passenger-flight-date p i
+{
+	font-size: 52px;
+}
+
+.plane-details
+{
+	padding:20px;
+}
+
+.plane-details table
+{
+	padding:50px;
+}
+.plane-details table thead
+{
+	text-align: left;
+}
+
+.plane-details table>tr
+{
+	border-bottom: 1px solid red;
+}
+
+.plane-details h2 
+{
+	padding:10px;
+}
+
+.plane-details h2 small
+{
+	font-size: 12px;
+	font-weight: 100;
+}
+
+
 
 
 

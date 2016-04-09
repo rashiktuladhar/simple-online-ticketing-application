@@ -23,9 +23,21 @@
 		<h3>User Information</h3>
 
 		<%= simple_form_for @customer do |f|%>
+			<%= f.input :customer_name, label: "Customer Name" %>
+			<%= f.input :customer_address, label: "Address" %>
+			<%= f.input :customer_contact, label: "Contact" %>
+			<%= f.input :no_tickets, label: "Total Tickets" %>
+
+
+			<%= f.hidden_field 'ticket_id', :value => @ticket.id %>
+			<%= f.hidden_field 'customer_route_type', :value => @ticket.route_type %>
+			<%= f.hidden_field 'customer_source', :value => @ticket.from_country %>
+			<%= f.hidden_field 'customer_destination', :value => @ticket.to_country %>
+			<%= f.hidden_field 'departure_date', :value => @ticket.departure_date %>
+			<%= f.hidden_field 'arrival_date', :value => @ticket.arrival_date %>
+
+			<%= f.button :submit , label: "Buy Tickets", :class => "btn btn-success"%>
 		<% end %> 
 	</div>
-
-	
-
 </div>
+
