@@ -2,6 +2,70 @@
 
 
 
-<%= render 'form' %>
+<div class="container search-block">
+
+	<h1>Online Ticketing System (Alpha)</h1>
+
+	<div class="col-md-3 left-side-bar">
+		<h2>Results For</h2>
+		<h4>From: Nepal</h4>
+		<h4>To: Australia</h4>
+		<h5>Departure Date: 2016-04-21</h5>
+		<h5>Arrival Date: 2016-04-30</h5>
+	</div>
+	<div class="col-md-9 ticketing-table">
+		<table>
+				<thead>
+					<th>Date And Time</th>
+					<th>Flight Details</th>
+					<th>Book Now</th>
+				</thead>
+
+				
+				<% @ticket_lists.each do |ticket_list| %>
+					<tr class="flight-list-each">
+						<td>
+							<section class="flight-date-details">
+								<article class="calendar-icon"><i class="fa fa-calendar"></i></article>
+								<article class="calendar-details">
+									<i>Current: </i><br>
+									<i class="fa fa-calendar"></i> <%= Date.today.to_formatted_s(:long)  %> <br>
+									<i class="fa fa-clock-o"></i> <%= Time.now.strftime("%I:%M:%S %Z %z") %>
+								</article>
+							</section>
+						</td>
+						<td>
+							<section class="flight-details">
+								<h4><%= ticket_list.airline_name %></h5>
+								<article class="flight-transit">Route : <%= ticket_list.type_route %></article>
+								<article class="flight-transit"><strong><%= ticket_list.from_country%> - <%=ticket_list.to_country %></strong></article>
+								<article class="flight-transit">No. of Tickets Available : <%= ticket_list.no_tickets %></article>
+							</section>
+							<div class="clearfix"></div>
+						</td>
+						<td>
+							<section class="flight-price">
+								<i class="fa fa-money"></i> $<%= ticket_list.ticket_price %> <small>(per person)</small>
+							</section>
+
+						
+							<%=button_to "Book Now", book_ticket_search_path(ticket_list.id), class: "book-now"%>
+
+						</td>
+					</tr>	
+					<div class="clearfix"></div>
+				<% end %>
+
+			</table>
+	</div>
+
+
+	<%= will_paginate @ticket_lists %>
+
+</div>
+
+
+
+
 
 

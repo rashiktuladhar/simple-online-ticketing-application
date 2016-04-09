@@ -1,0 +1,32 @@
+<div class="container search-block">
+	<h1>Booking Details</h1>
+
+
+	<div class="col-md-3 left-side-bar">
+		<h4>Airlines: <%= @ticket.airline_name %></h4>
+		<% if(@ticket.route_type=="O") %>
+			<h4>From: <%= @ticket.from_country %></h4>
+			<h5>Departure Date: </strong> <%= @ticket.departure_date.to_formatted_s(:long) %></h5>
+		<% else %>
+			<h4>From: <%= @ticket.from_country %></h4>
+			<h4>To: <%= @ticket.to_country %></h4>
+			<h5>Departure Date: </strong> <%= @ticket.departure_date.to_formatted_s(:long) %></h5>
+			<h5>Arrival Date: </strong> <%= @ticket.arrival_date.to_formatted_s(:long) %></h5>
+		<% end %>		
+			<h5>Flight Type: <%= @ticket.type_route %></h5>
+			<h5>Ticket Price: $<%= @ticket.ticket_price %> (per person)</h5>
+
+	</div>
+
+	<div class="col-md-9 user-information">
+		
+		<h3>User Information</h3>
+
+		<%= simple_form_for @ticket do |f|%>
+			<%= f.input :ticket_price, label: "text"%>
+		<% end %> 
+	</div>
+
+	
+
+</div>

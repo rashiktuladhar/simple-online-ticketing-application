@@ -17,7 +17,7 @@
     @ticket = Ticket.new(ticket_params)
     if @ticket.save
       flash[:success] = "Ticket details added successfully."
-      redirect_to root_path
+      redirect_to tickets_path
     else
       render 'new'
     end
@@ -26,7 +26,7 @@
   def update
     if @ticket.update(ticket_params)
       flash[:success] = "Ticket details updated successfully."
-      redirect_to root_path
+      redirect_to tickets_path
     else
       render 'edit'
     end
@@ -35,7 +35,7 @@
   def destroy
     @ticket.destroy
       flash[:success] = "Ticket details deleted successfully."
-      redirect_to root_path
+      redirect_to tickets_path
   end
 
   def edit

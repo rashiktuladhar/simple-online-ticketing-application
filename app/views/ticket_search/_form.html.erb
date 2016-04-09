@@ -1,0 +1,6 @@
+<% content_for :search do %>
+  <%= search_form_for @search do |f| %>
+    <%= f.text_field :from_country, class: "radius-left expand", placeholder: "Movie title" %>
+      <%= f.submit "Search", class: "radius-right button" %>
+  <% end %>
+<% end %>

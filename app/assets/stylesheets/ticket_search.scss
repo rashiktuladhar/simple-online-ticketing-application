@@ -1,3 +1,185 @@
 @import "bootstrap-sprockets";
 @import "bootstrap";
 @import "font-awesome";
+@import url(https://fonts.googleapis.com/css?family=Open+Sans:300);
+
+
+.search-block
+{
+	font-family: 'Open Sans', sans-serif;	h1
+	{
+		border-bottom: 1px solid rgba(0,0,0,0.2);
+		font-weight: 100;
+	}
+
+	.left-side-bar
+	{
+
+	}
+
+	.user-information
+	{
+		h3
+		{
+			border-bottom: 1px solid rgba(0,0,0,0.1);
+		}
+	}
+
+	.ticketing-table
+	{
+
+		table
+		{
+			margin-top: 20px;
+			width:750px;
+			thead
+			{
+				text-align: left;
+			}
+		}
+
+		table>tr
+		{
+			border-bottom: 1px solid red;
+		}
+
+		tr
+		{
+			border-bottom: 1px solid rgba(0,0,0,0.1);
+		}
+
+		tr:last-child
+		{
+			border-bottom: 0px;
+		}
+
+		tr.flight-list-each
+		{
+			height:150px;
+		}
+
+		header
+		{
+			color:grey;
+			padding: 20px;
+			border-bottom: 1px solid rgba(0,0,0,0.2);
+
+			.search-terms
+			{
+				float: left;
+			}
+
+			.search-date
+			{
+				float:right;
+			}
+		}
+
+		section
+		{
+
+			&.flight-date-details .calendar-icon
+			{
+				font-size: 50px;
+				color:grey;
+			}
+
+			&.flight-date-details .calendar-details
+			{
+				font-size: 14px;
+				color:grey;
+				padding-top:10px;
+			}
+
+			&.logo-placeholder
+			{
+				float:left;
+			}
+
+			&.logo-placeholder img
+			{
+				width:120px;
+			}
+
+			&.flight-details
+			{
+				padding: 10px;
+				float:left;
+				margin-left: 10px;
+			}
+
+			&.flight-details .flight-transit
+			{
+				margin-left: 5px;
+				padding: 2px;
+			}
+
+			&.flight-price
+			{
+				font-size: 30px;
+				color:grey;
+				small
+				{
+					font-size: 14px;
+				}
+			}
+		}
+
+		.book-now
+		{
+			border:none;
+			padding:10px;
+			background:#449D44;
+			color:#FFF;
+			-webkit-box-shadow: 1px 0px 5px 1px rgba(209,198,209,1);
+			-moz-box-shadow: 1px 0px 5px 1px rgba(209,198,209,1);
+			box-shadow: 1px 0px 5px 1px rgba(209,198,209,1);
+		}
+
+		.book-now:hover
+		{
+			cursor:pointer;
+			-webkit-box-shadow: none;
+			-moz-box-shadow: none;
+			box-shadow: none;
+		}
+	}
+}
+
+
+.pagination
+{
+	float:right;
+	a
+	{
+		color: #D3D4D4;
+		text-decoration: none;
+		padding: 10px;
+		background: rgba(0,0,0,0.5);
+
+		&:hover
+		{
+			background:#449D44;
+		}
+	}
+
+	em
+	{
+		padding: 10px;
+		background:#449D44;
+	}
+
+	.disabled
+	{
+		padding:10px;
+		background:#CCC;
+	}
+}
+
+
+
+
+
+
+
+

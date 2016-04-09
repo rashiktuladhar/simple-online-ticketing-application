@@ -5,12 +5,11 @@ class Ticket < ActiveRecord::Base
     airlines_datum.airlines_name
   end
 
-  def self.search(search)
-    if search
-    	binding.pry
-      find(:all, :conditions => ['airlines_name LIKE ?', "%#{search}%"])
+  def type_route
+    if route_type=="T"
+    	"Two Way"
     else
-      
+    	"One Way"
     end
   end
 

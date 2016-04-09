@@ -6,6 +6,9 @@ Rails.application.routes.draw do
   resources :ticket_search
   root 'ticket_search#index'
 
+
+  get 'book_ticket/:id', to: 'ticket_search#book', as: 'book_ticket_search'
+
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
