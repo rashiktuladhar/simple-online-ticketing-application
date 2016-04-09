@@ -1,0 +1,2 @@
+module TicketSearchHelper
+end
