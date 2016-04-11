@@ -5,10 +5,10 @@ class Customer < ActiveRecord::Base
 
 	def update_ticket_count 
 	    ticketid = Ticket.find(self.ticket_id)
-	    noticket = Customer.find(self.no_tickets)
-	    if ticketid!=""
-	    else
-	      update_attribute(:no_tickets, no_tickets-5)	    	
+	    noticket = self.no_tickets
+	    if ticketid
+	    	ticketid.update_attribute(:no_tickets, ticketid.no_tickets - noticket)
+	    else    	
 	    end
   	end
 end
